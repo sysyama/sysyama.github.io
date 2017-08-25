@@ -6,8 +6,11 @@
 <body>
 <form id="FRM1" name="FRM1" method="post">
 <a class="arrow_link" href="javaScript:window.open('index2.html','win1','toolbar=no,location=no,directories=no,scrollbars=yes,width=850,height=600');void(0)">
-test link
+popup block
 </a>
+<br><br><br>
+<a class="arrow_link2" href="javaScript:window.open('index2.html','win1','toolbar=no,location=no,directories=no,scrollbars=yes,width=850,height=600');void(0)">
+no block
 <br><br><br>
 <input type="submit" name="moushikomu" id="btn" value="submit">
 <input type="button" value="戻る" id="vp-view" name="vp" disabled="">
@@ -15,7 +18,6 @@ test link
 </body>
 <script type="text/javascript">
 $(".arrow_link").bind("click", function(){
-  //alert( $(this).href );
     $.ajax({
       url: 'https://sysyama.github.io',
       success: function(data) {
