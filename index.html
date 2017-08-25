@@ -1,10 +1,23 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <a class="arrow_link" href="javaScript:window.open('index2.html','win1','toolbar=no,location=no,directories=no,scrollbars=yes,width=850,height=600');void(0)">
 test link
 </a>
 </body>
+<script type="text/javascript">
+$(".arrow_link").bind("click", function(){
+  //alert( $(this).href );
+    $.ajax({
+      url: 'https://sysyama.github.io',
+      success: function(data) {
+        window.open('index2.html');  // ブロック
+      }
+    });
+  return false;
+});
+</script>
 </html>
